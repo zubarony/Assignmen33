@@ -368,7 +368,7 @@ h1,h2,h3,h4,h5,h6 ,a{
     height: 90px;
     width: 90px;
     display: inline-block;
-    background: #ffff;
+    background: rgba(255, 255, 255, 0.555);
     line-height: 95px;
     font-size: 40px;
     border-radius: 50%;
@@ -401,6 +401,18 @@ h1,h2,h3,h4,h5,h6 ,a{
     border-radius: 50%;
     animation: rony 1s ease-out infinite;
 }
+
+.play-animation-button::after {
+    content: "";
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    background: #ffffff50;
+    border-radius: 50%;
+    animation: rony 1s ease-out infinite;
+}
 @keyframes rony{
     0%{
         transform: scale(1);
@@ -411,9 +423,14 @@ h1,h2,h3,h4,h5,h6 ,a{
         opacity: .5;
         
     }
+    50%{
+        transform: scale(1.5);
+        opacity: .7;
+        
+    }
 
   
-    50%{
+    75%{
         transform: scale(1.7);
         opacity: .9;
         
